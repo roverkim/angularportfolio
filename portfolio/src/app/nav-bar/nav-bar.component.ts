@@ -13,6 +13,7 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
     // Toggle Menu
     $('#menu').on('click', (e)=>{
+      $('.header_menu').toggleClass('menuActive');
       $('.nav').toggleClass('open');
       e.stopPropagation();
     });

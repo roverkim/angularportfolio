@@ -9,4 +9,14 @@ import * as $ from 'jquery';
 export class AppComponent {
   title = 'app';
 
+  ngOnInit(){
+    $(document).ready(function() {
+      setTimeout(()=>{
+        $('#loader-wrapper').toggleClass('loaded');
+        $('#loader').toggleClass('loaded');
+      }, 2000)
+
+    });
+  }
+
 }
