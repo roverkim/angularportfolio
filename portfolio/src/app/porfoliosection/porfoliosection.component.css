@@ -1,0 +1,211 @@
+@keyframes color-change {
+  0% {
+    background: #009DDC;
+  }
+  33% {
+    background: #50B949;
+  }
+  66% {
+    background: #EE2D24;
+  }
+  100% {
+    background: #FEB825;
+  }
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    background: #009DDC;
+  }
+  33% {
+    background: #50B949;
+  }
+  66% {
+    background: #EE2D24;
+  }
+  100% {
+    background: #FEB825;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes color-bubble {
+  0% {
+    color: #009DDC;
+  }
+  33% {
+    color: #50B949;
+  }
+  66% {
+    color: #EE2D24;
+  }
+  100% {
+    color: #FEB825;
+  }
+}
+
+@keyframes color-bubble {
+  0% {
+    color: #009DDC;
+  }
+  33% {
+    color: #50B949;
+  }
+  66% {
+    color: #EE2D24;
+  }
+  100% {
+    color: #FEB825;
+  }
+}
+
+.bgimg-2 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../assets/portfolio.jpg");
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Portfolio */
+
+.portfolio_wrapper {
+  border: 2px black solid;
+  height: 90%;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background: rgba(0,0,0,0.5);
+}
+
+.portfolio_wrapper .featured_section {
+  order: 0;
+  height: 100%;
+  width: 60%;
+  border-right: 1px black solid;
+}
+
+.portfolio_wrapper .github_section {
+  order: 1;
+  height: 100%;
+  width: 40%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.portfolio_wrapper .github_section::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio_wrapper ul {
+  margin: 10px;
+  padding: 0px;
+}
+
+.portfolio_wrapper li {
+  padding: 10px;
+}
+
+
+.githubItem {
+  height: auto;
+  width: 100%;
+  border-bottom: 1px white solid;
+  margin-bottom: 5px;
+  transition: background 1s ease;
+}
+
+.githubItem:hover {
+  background: rgba(255,255,255, 0.5)
+}
+
+.githubItem a {
+  display: block;
+  height: 100%;
+  widows: 100%;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+}
+
+.githubItem .link_header {
+  font-size: 2.2rem;
+  text-align: center;
+  color: yellow;
+}
+
+.githubItem .link_header p{
+  margin-top: 5px;
+}
+
+
+.githubItem .git_description {
+  font-size: 1.5rem;
+}
+
+.githubItem .git_updated {
+  font-size: 18px;
+}
+
+
+
+/* Loader */
+.spinner_wrapper {
+  transform: scale(3);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.spinner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin: auto;
+  margin: auto;
+  border: 1px solid;
+  -webkit-animation: rotate 1.5s linear 0s infinite, color-bubble 5s ease-in-out 0s infinite;
+  animation: rotate 1.5s linear 0s infinite, color-bubble 5s ease-in-out 0s infinite;
+}
+
+.spinner:after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 100%;
+  -webkit-animation: color-change 5s ease-in-out 0s infinite;
+  animation: color-change 5s ease-in-out 0s infinite;
+  left: -5px;
+  top: 18px;
+}

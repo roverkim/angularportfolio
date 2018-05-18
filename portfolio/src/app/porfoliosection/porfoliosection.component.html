@@ -1,0 +1,36 @@
+<div class="bgimg-2">
+  <!-- <div class="caption">
+  </div> -->
+  <!-- Loader -->
+  <span *ngIf="loading; else loaded">
+    <div class="spinner_wrapper">
+      <div class="spinner"></div>
+    </div>
+  </span>
+
+  <ng-template #loaded>
+      <div class="portfolio_wrapper">
+        <section class="featured_section">
+
+
+        </section>
+        <section class="github_section">
+          <ul>
+            <li *ngFor="let github of githubObject" class="githubItem">
+              <a style="height=100%; width=100%;" href={{github.html_url}}>
+                <span class="link_header">
+                  <p>{{github.name}}</p>
+                </span>
+                <div class="git_description">
+                  <p>{{github.description}}</p>
+                </div>
+                <div class="git_updated">
+                  <p>Updated At: {{github.updated_at}}</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+  </ng-template>
+</div>

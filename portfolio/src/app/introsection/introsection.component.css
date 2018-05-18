@@ -1,0 +1,91 @@
+.bgimg-1 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100%;
+  width: 100%
+}
+
+.bgimg-1 {
+  background-image: url("../../assets/intro.jpg");
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typist {
+  color: darkslategrey;
+}
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  display:none;
+  /* left: 50%;
+  margin-left: -30px; */
+  bottom: 20%;
+}
+
+.arrows path {
+  stroke: black;
+  fill: transparent;
+  stroke-width: 2.5px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0
+  }
+  40% {
+    opacity: 1
+  }
+  80% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes arrow
+/*Safari and Chrome*/
+
+  {
+  0% {
+    opacity: 0
+  }
+  40% {
+    opacity: 1
+  }
+  80% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+  /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+  /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  /* Safari 和 Chrome */
+}

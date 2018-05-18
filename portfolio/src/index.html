@@ -20,7 +20,7 @@
 
       setTimeout(()=>{
         $('.typist').typist({
-            speed: 12,
+            speed: 13,
             text: 'Hello.'
           }).typistPause(500)
     	       .typistRemove(6)
@@ -29,12 +29,13 @@
                     .typistPause(500)
                      .typistRemove(17)
                        .typistPause(200)
-                        .typistAdd('Welcome to my portfolio')
-                            .typistStop()
+                        .typistAdd('Welcome to my portfolio', ()=>{
+                          $('.arrows').css('display', 'block');
+                            }).typistStop()
       }, 2500)
 
     });
-    setTimeout(particlesJS.load('particles-js', 'assets/particles.json', null), 100)
+    setTimeout(particlesJS.load('particles-js', 'assets/particles.json', null), 200)
   </script>
 </body>
 </html>

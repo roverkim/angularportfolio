@@ -7,16 +7,17 @@ import * as $ from 'jquery';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  public showContent: boolean = false;
+  title: string = 'app';
 
   ngOnInit(){
-    $(document).ready(function() {
       setTimeout(()=>{
         $('#loader-wrapper').toggleClass('loaded');
         $('#loader').toggleClass('loaded');
-      }, 2000)
+      }, 2000);
 
-    });
+      setTimeout(()=>this.showContent = true, 9500);
   }
 
 }

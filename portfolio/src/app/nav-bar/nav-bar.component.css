@@ -1,7 +1,7 @@
 .header_menu {
   position: fixed;
-  top: 0;
-  right: 10px;
+  top: 5px;
+  right: 25px;
   color: grey;
   font-size: 4rem;
   transition: color 0.5s ease-in-out,
@@ -21,7 +21,7 @@
 
 .nav {
   z-index: 10;
-  width: 800px;
+  width: calc(100vw/3);
   height: 100%;
   position: fixed;
   top: 0;
@@ -29,15 +29,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   /* This trasform moves the drawer off canvas. */
-  -webkit-transform: translate(-800px, 0);
-  transform: translate(-800px, 0);
+  -webkit-transform: translate(calc(-100vw/3), 0);
+  transform: translate((-100vw/3), 0);
   /* Optionally, we animate the drawer. */
   transition: transform 0.5s ease;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .nav.open {
