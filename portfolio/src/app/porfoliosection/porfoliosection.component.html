@@ -11,13 +11,34 @@
   <ng-template #loaded>
       <div class="portfolio_wrapper">
         <section class="featured_section">
-
-
+          <carousel style="height: 100%;">
+            <slide style="height: 100%;">
+              <img src="../../assets/pixperia.PNG" alt="first slide" style="display: block; width: 100%;">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Pixperia</h3>
+                <p>React, Mongodb, Node and Express</p>
+              </div>
+            </slide>
+            <slide>
+              <img src="../../assets/pixprience.PNG" alt="second slide" style="display: block; width: 100%;">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Pixprience</h3>
+                <p>Html, CSS, Node and MySQL</p>
+              </div>
+            </slide>
+            <slide>
+              <img src="../../assets/scraper.PNG" alt="third slide" style="display: block; width: 100%;">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>NPR Web Scrapper</h3>
+                <p>Node, Mongodb, Cheerio (Web Scrapper), Handlebars, Materialize </p>
+              </div>
+            </slide>
+          </carousel>
         </section>
         <section class="github_section">
           <ul>
             <li *ngFor="let github of githubObject" class="githubItem">
-              <a style="height=100%; width=100%;" href={{github.html_url}}>
+              <a style="height=100%; width=100%;" href={{github.html_url}} target="_blank">
                 <span class="link_header">
                   <p>{{github.name}}</p>
                 </span>

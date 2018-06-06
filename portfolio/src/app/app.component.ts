@@ -1,6 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, ElementRef, PipeTransform, Pipe, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { DomSanitizer } from "@angular/platform-browser";
 
+@Pipe({ name: 'safe' })
+export class SafePipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer) { }
+  transform(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +16,7 @@ import * as $ from 'jquery';
 })
 export class AppComponent {
 
-  public showContent: boolean = false;
+  public showContent: boolean = true;
   title: string = 'app';
 
   ngOnInit(){

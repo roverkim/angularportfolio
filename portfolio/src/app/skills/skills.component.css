@@ -1,0 +1,407 @@
+ul , li {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Skills Main Structure */
+#skills_section {
+  background-image: url("../../assets/resume.jpg");
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 10% 80% 10%;
+  grid-template-areas: ". nav_skills ." ". skills ." ". download_resume .";
+  position: relative;
+  padding-top: 50px;
+}
+
+.cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1;
+}
+
+.download_resume {
+  grid-area: download_resume;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#skills_section .nav_skills {
+  grid-area: nav_skills;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.skills_list {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-bottom: 5px;
+}
+
+#skills_section .skills {
+  grid-area: skills;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#skills_section .skills.pdf {
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+#skills_section .skills .skills_wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#left_skills {
+  order: 0;
+  width: 59%;
+  z-index: 2;
+  color: white;
+}
+
+#left_skills ul {
+  width: 80%;
+  margin-top: 50px;
+}
+
+#right_skills {
+  order: 1;
+  width: 39%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: wrap;
+  flex-grow: 1;
+  flex-direction: column;
+  z-index: 2;
+}
+
+/* Right SKills */
+
+.certification_top, .certification_bottom {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certification_top {
+  border-bottom: white 1px solid;
+}
+
+.certification_img {
+  height: auto;
+  width: 100%;
+  margin: 10px;
+}
+
+/* Toggle Switch */
+.container {
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  width: 450px;
+  padding: 25px 5px;
+  border-radius: 10px;
+  /* background-color: #cdcdcd; */
+  font-family: "Oswald";
+  text-align: center;
+  margin-bottom: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container .option {
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: top;
+  color: white;
+  font-size: 45px;
+  cursor: pointer;
+  opacity: .5;
+  position: relative;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.container .option.on {
+  font-weight: bold;
+  opacity: 1;
+}
+
+.container .slide {
+  width: 100px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  top: 17px;
+  cursor: pointer;
+}
+
+.container .slide:before,
+.container .slide:after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  z-index: 1;
+  left: 0;
+  display: block;
+  width: 100px;
+  height: 40px;
+  background-color: #cb4a4a;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 100px;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.container .slide:after {
+  top: 2px;
+  z-index: 2;
+  left: 60px;
+  width: 33px;
+  height: 33px;
+  background-color: #ffffff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.container .slide.on:after {
+  left: 7px;
+}
+
+.container .slide.on:before {
+  background-color: #7dbc7f;
+}
+
+/* Skills Layout */
+
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.skill .skill_name {
+  order: 0;
+  width: 60%;
+  font-size: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.skill .skill_name .skill_name_wrapper {
+  display: flex;
+  margin: auto;
+  height: 60%;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill .skill_name .skill_name_wrapper .skill_name_text {
+  /* order: 0; */
+  width: 50%;
+  font-size: 3rem;
+}
+
+.skill .skill_name .skill_name_wrapper .skill_icon {
+  /* order: 1; */
+  max-height: inherit;
+  max-width: inherit;
+  width: 50%;
+  height: 100px;
+  width: auto;
+}
+
+.skill .skill_bar {
+  order: 1;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.skill .skill_bar .bar{
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+/* Modal */
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999999999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 100vh;
+    max-width: 1000px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 760px){
+    .modal-content {
+        width: 100%;
+    }
+
+    #skills_section {
+      grid-template-columns: 100%;
+      grid-template-rows: 10% 80% 10%;
+      grid-template-areas: "nav_skills " " skills " "download_resume";
+    }
+
+    #skills_section .skills_slider {
+      display: flex;
+      transform: scale(0.8);
+      width: 100%;
+      flex-grow: 1;
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+
+    #skills_section .skills_slider .container {
+      padding: 0;
+      margin: 0;
+
+    }
+
+    #left_skills {
+      margin-top: 50px;
+    }
+
+    #left_skills, #right_skills {
+      width: 100%;
+    }
+
+    #left_skills .skill {
+      transform: scale(0.9);
+
+    }
+
+
+
+    #left_skills ul {
+      width: 100%;
+      margin: 0;
+    }
+
+    #left_skills .skill_name_text {
+      font-size: 2rem;
+    }
+
+    #left_skills .skill_bar {
+      width: 100%;
+    }
+
+    .close {
+      right: 15px;
+    }
+
+}

@@ -14,9 +14,10 @@ export class ContactsectionComponent implements OnInit {
     $(".email-button").click(function() {
       $(".envelope").toggleClass("active");
       setTimeout(()=>$('.card').toggleClass('card_click'), 1200);
+      $('.submit').toggleClass("active");
     });
 
-    // SORRY FOR UGLY CODE. FIX LATER
+
     $('.submit').on('click', function(e) {
       e.preventDefault();
       $('.card').toggleClass('card_click')

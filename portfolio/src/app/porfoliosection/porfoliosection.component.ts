@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApicallsService } from '../apicalls.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-porfoliosection',
@@ -10,6 +11,7 @@ export class PorfoliosectionComponent implements OnInit {
 
   githubObject: Array<object>;
   loading: boolean = true;
+  video: string = "https://www.google.com/"
 
   constructor(private apicalls: ApicallsService) {
     console.log(this.apicalls);
@@ -17,6 +19,7 @@ export class PorfoliosectionComponent implements OnInit {
 
   ngOnInit() {
     this.getGithubLinks();
+    $('.carousel').css('height', '100%');
   }
   //
   getGithubLinks(): void {

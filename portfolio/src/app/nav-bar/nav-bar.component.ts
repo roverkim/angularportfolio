@@ -13,7 +13,7 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
     // Toggle Menu
     $('#menu').on('click', (e)=>{
-      $('.header_menu').toggleClass('menuActive');
+      $('.fa-bars').toggleClass('menuActive');
       $('.nav').toggleClass('open');
       e.stopPropagation();
     });
@@ -29,14 +29,15 @@ export class NavBarComponent implements OnInit {
 
         // Store hash
         var hash = this.hash;
+        console.log(hash);
 
         // Using jQuery's animate() method to add smooth page scroll
         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
           scrollTop: $(hash).offset().top
-        }, 800, function(){
+        }, 1000, function(){
           // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
+          // window.location.hash = hash;
         });
       } // End if
     });

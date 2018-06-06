@@ -1,0 +1,66 @@
+<div id="skills_section">
+  <div class="cover"></div>
+  <div class="nav_skills">
+    <nav class="skills_slider">
+      <div class="container">
+        <a class="on option">Skills</a>
+        <span href="#" class="slide on"></span>
+        <a class="option">Resume</a>
+      </div>
+    </nav>
+  </div>
+
+  <span class="skills" *ngIf="displaySkills; else displayResume">
+      <div class="skills_wrapper">
+        <div id="left_skills">
+          <ul>
+            <li class="skill" *ngFor="let skill of skillsArray">
+              <div class="skill_name">
+                <div class="skill_name_wrapper">
+                  <div class="skill_name_text">{{skill.name}}</div>
+                  <img src={{skill.img}} class="skill_icon">
+                </div>
+              </div>
+              <div class="skill_bar">
+                <div id="{{skill.id}}" class="bar">
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+        <div id="right_skills">
+          <div class="certification_top">
+                <img id="northwestern" class="certification_img" src="../../assets/northwestern.jpg"/>
+          </div>
+          <div class="certification_bottom">
+            <img id="uwm" class="certification_img" src="../../assets/uwm.jpg"/>
+          </div>
+        </div>
+      </div>
+
+</span>
+  <ng-template #displayResume>
+    <pdf-viewer [src]="pdfSrc" [render-text]="true" style="display: block;" [stick-to-page]="true" [fit-to-page]="true" class="skills pdf" [autoresize]="true"></pdf-viewer>
+    <!-- Download Button -->
+    <app-download-button class="download_resume"></app-download-button>
+  </ng-template>
+
+</div>
+
+<!-- Trigger the Modal -->
+<!-- <img id="myImg" src="img_fjords.jpg" alt="Trolltunga, Norway" width="300" height="200"> -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01" alt="" />
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
