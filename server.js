@@ -30,7 +30,7 @@ APP.use(CORS());
 /////////////////////////////////////////////// /* Email */ //////////////////////////////////////////////////////////
 
 const transporter = nodemailer.createTransport({
- service: "gmail",
+ service: process.env.EMAIL_SERVICE,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASSWORD
@@ -74,8 +74,6 @@ APP.post("/email", function(req, res) {
         //console.log(`Email sent to $(jobMail.to) ` + info.response);
       }
     });
-
-
 });
 
 
