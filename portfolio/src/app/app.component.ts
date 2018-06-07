@@ -16,7 +16,7 @@ export class SafePipe implements PipeTransform {
 })
 export class AppComponent {
 
-  public showContent: boolean = true;
+  public showContent: boolean = false;
   title: string = 'app';
 
   ngOnInit(){
