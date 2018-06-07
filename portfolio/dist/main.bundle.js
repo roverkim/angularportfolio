@@ -82,7 +82,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <app-load-screen></app-load-screen> -->\n<app-introsection></app-introsection>\n\n<span *ngIf=\"showContent\">\n\n  <div class=\"intro section_break\">\n    <h2>Introduction</h2>\n    <p style=\"color:white;\">I am a junior fullstack developer who's specializes in using both the Mean and Mern stacks.</p>\n  </div>\n\n  <app-skills></app-skills>\n\n  <div class=\"section_break portfolio \">\n    <div>\n      <h2 style-=\"color:white;\">Portfolio</h2>\n    </div>\n  </div>\n\n  <app-porfoliosection></app-porfoliosection>\n\n  <div class=\"section_break contact\">\n    <div>\n      <h2>Contact Me</h2>\n    </div>\n  </div>\n\n  <app-contactsection></app-contactsection>\n\n  <footer class=\"footer\">\n    <div class=\"container\">\n      <span class=\"footer_text\">\n        <span style='color: white;'>Angular</span>\n<i class=\"fa fa-cog\" aria-hidden=\"true\"></i> Ryan\n</span>\n</div>\n</footer>\n</span>\n"
+module.exports = "<app-load-screen></app-load-screen>\n<app-introsection></app-introsection>\n\n<span *ngIf=\"showContent\">\n\n  <div class=\"intro section_break\">\n    <h2>Introduction</h2>\n    <p style=\"color:white;\">I am a junior fullstack developer who's specializes in using both the Mean and Mern stacks.</p>\n  </div>\n\n  <app-skills></app-skills>\n\n  <div class=\"section_break portfolio \">\n    <div>\n      <h2 style-=\"color:white;\">Portfolio</h2>\n    </div>\n  </div>\n\n  <app-porfoliosection></app-porfoliosection>\n\n  <div class=\"section_break contact\">\n    <div>\n      <h2>Contact Me</h2>\n    </div>\n  </div>\n\n  <app-contactsection></app-contactsection>\n\n  <footer class=\"footer\">\n    <div class=\"container\">\n      <span class=\"footer_text\">\n        <span style='color: white;'>Angular</span>\n<i class=\"fa fa-cog\" aria-hidden=\"true\"></i> Ryan\n</span>\n</div>\n</footer>\n</span>\n"
 
 /***/ }),
 
@@ -124,7 +124,7 @@ var SafePipe = /** @class */ (function () {
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.showContent = true;
+        this.showContent = false;
         this.title = 'app';
     }
     AppComponent.prototype.ngOnInit = function () {
