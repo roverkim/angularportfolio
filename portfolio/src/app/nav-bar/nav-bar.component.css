@@ -69,6 +69,7 @@
 
 .nav__item:hover a {
   color: yellow;
+  text-decoration-line: none !important;
 }
 
 .nav__item a {

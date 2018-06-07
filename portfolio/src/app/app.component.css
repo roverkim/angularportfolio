@@ -30,7 +30,7 @@
 .fa-cog {
   animation: rotate 5s infinite ease;
   margin:0 5px 0 5px;
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 
 .section_break {
@@ -77,9 +77,10 @@ h2 + p {
 }
 
 .footer .container .footer_text {
-  font-size: 2rem;
+  font-size: 1rem;
   color: wheat;
 }
+
 
 /* Turn off parallax scrolling for tablets and phones */
 /* @media only screen and (max-device-width: 1024px) {
