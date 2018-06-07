@@ -118,6 +118,7 @@ ul , li {
   height: auto;
   width: 100%;
   margin: 10px;
+  border: 1px black solid;
 }
 
 /* Toggle Switch */
@@ -346,7 +347,7 @@ ul , li {
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 760px){
+@media only screen and (max-width: 1200px){
     .modal-content {
         width: 100%;
     }

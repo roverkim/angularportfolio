@@ -16,7 +16,7 @@ export class DownloadButtonComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log(CustomEase);
+    //console.log(CustomEase);
 
     let tl, downloading = false, points = [],
       btn = document.querySelector('.btn'),
@@ -33,7 +33,7 @@ export class DownloadButtonComponent implements OnInit {
     btn.addEventListener('click', animation);
 
     function animation() {
-      console.log('clicked')
+      //console.log('clicked')
       if (downloading) return;
       downloading = !downloading;
       let downloadTime = Math.random() * .5 + .7;

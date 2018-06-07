@@ -14,7 +14,7 @@ export class PorfoliosectionComponent implements OnInit {
   video: string = "https://www.google.com/"
 
   constructor(private apicalls: ApicallsService) {
-    console.log(this.apicalls);
+    //console.log(this.apicalls);
   }
 
   ngOnInit() {
@@ -26,7 +26,7 @@ export class PorfoliosectionComponent implements OnInit {
     this.apicalls.getGithubLinks().subscribe(response => {
       this.githubObject = response;
       this.loading = false;
-      console.log(this.githubObject)
+      //console.log(this.githubObject)
     })
   }
 

@@ -78,14 +78,14 @@ export class SkillsComponent implements OnInit {
       }
       // this.displaySkills = this.displaySkills.bind(SkillsComponent);
 
-      console.log(this.displaySkills)
+      //console.log(this.displaySkills)
       if(this.displaySkills == true) {
         this.displaySkills = false;
-        console.log('display resume')
+        //console.log('display resume')
       } else {
         this.displaySkills = true;
-        console.log('display skills')
-        console.log('this is '+this.skillsArray);
+        //console.log('display skills')
+        //console.log('this is '+this.skillsArray);
 
         let checkCondition = () => {
           if (document.getElementById('bar1')) {
@@ -119,7 +119,7 @@ export class SkillsComponent implements OnInit {
         this.skillsArray.map(skill => {
           this.displayRatings(skill.id, skill.name, skill.rating, skill.duration);
         });
-        console.log('scrolling')
+        //console.log('scrolling')
         counter++;
       };
 
@@ -129,11 +129,11 @@ export class SkillsComponent implements OnInit {
           $('.fa-bars').css('color', 'black');
       };
 
-      console.log($('#skills_section').offset().top)
-          console.log($( window ).scrollTop())
-          console.log($('#skills_section').height());
+      //console.log($('#skills_section').offset().top)
+          //console.log($( window ).scrollTop())
+          //console.log($('#skills_section').height());
       //
-      if (($( window ).scrollTop() - 100 > ($('#skills_section').offset().top + $('#skills_section').height()) && $(window).width() > 760)) {
+      if (($( window ).scrollTop() - 100 > ($('#skills_section').offset().top + $('#skills_section').height()) && $(window).width() > 1200)) {
           $('.fa-bars').css('color', 'black');
       };
 
@@ -163,7 +163,7 @@ export class SkillsComponent implements OnInit {
 
     $("#northwestern").on('click', () => {
       let img = <HTMLImageElement>document.getElementById('northwestern');
-      console.log(img);
+      //console.log(img);
       modal.style.display = "block";
       modalImg.src = img.src;
       captionText.innerHTML = img.alt;
@@ -182,7 +182,7 @@ export class SkillsComponent implements OnInit {
   displayRatings(id: string, name: string, rating: number, duration: number): void {
 
     let barID = document.getElementById(id);
-    console.log(barID);
+    //console.log(barID);
 
     let bar = new ProgressBar.Circle(barID, {
       color: 'yellow',

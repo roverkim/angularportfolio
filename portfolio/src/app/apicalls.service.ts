@@ -8,6 +8,11 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
+interface responseObject {
+  status: string;
+  sender: string;
+}
+
 @Injectable()
 export class ApicallsService {
 
@@ -18,5 +23,9 @@ export class ApicallsService {
   /** GET heroes from the server */
    getGithubLinks(): Observable <Array<object>>{
     return this.http.get<Array<object>>(this.heroesUrl);
+  }
+
+  submitEmail(emailObject: object): Observable <responseObject> {
+    return this.http.post<responseObject>('/email', emailObject);
   }
 }

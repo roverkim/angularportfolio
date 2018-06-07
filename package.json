@@ -1,0 +1,27 @@
+{
+  "name": "angularportfolio",
+  "version": "1.0.0",
+  "description": "Portfolio created using angular5 and node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roverkim/angularportfolio.git"
+  },
+  "author": "Ryan Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roverkim/angularportfolio/issues"
+  },
+  "homepage": "https://github.com/roverkim/angularportfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "nodemailer": "^4.6.5"
+  }
+}
