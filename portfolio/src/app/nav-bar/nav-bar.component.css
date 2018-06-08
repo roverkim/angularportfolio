@@ -16,6 +16,9 @@
   color: yellow;
 }
 
+.bar_hover:hover {
+  color: yellow;
+}
 .fa-bars {
   transition: color 0.5s ease-in-out,
   transform 0.5s ease-in-out;

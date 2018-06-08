@@ -31,31 +31,31 @@ export class SkillsComponent implements OnInit {
     }, {
       id: 'bar2',
       name: 'Css3',
-      rating: 75,
+      rating: 85,
       duration: 2500,
       img: '../../assets/css.png'
     }, {
       id: 'bar3',
-      name: 'Angular',
-      rating: 70,
+      name: 'Angular 5',
+      rating: 80,
       duration: 3000,
       img: '../../assets/angular.png'
     }, {
       id: 'bar4',
       name: 'React',
-      rating: 75,
+      rating: 80,
       duration: 3500,
       img: '../../assets/react.png'
     }, {
       id: 'bar5',
       name: 'Node',
-      rating: 75,
+      rating: 85,
       duration: 4000,
       img: '../../assets/node.png'
     }, {
       id: 'bar6',
       name: 'Express',
-      rating: 70,
+      rating: 80,
       duration: 4500,
       img: '../../assets/express.png'
     }];
@@ -125,8 +125,21 @@ export class SkillsComponent implements OnInit {
 
       if ($(window).scrollTop() + 250 > div_top ) {
         $('.fa-bars').css('color', 'white');
+        $('.fa-bars').hover(function() {
+          $(this).css('color', 'yellow')
+        });
+        $('.fa-bars').mouseleave(function() {
+          $(this).css('color', 'white');
+        })
+
       } else {
           $('.fa-bars').css('color', 'black');
+          $('.fa-bars').hover(function() {
+            $(this).css('color', 'yellow');
+          });
+          $('.fa-bars').mouseleave(function() {
+            $(this).css('color', 'white');
+          })
       };
 
       //console.log($('#skills_section').offset().top)
@@ -135,6 +148,12 @@ export class SkillsComponent implements OnInit {
       //
       if (($( window ).scrollTop() - 100 > ($('#skills_section').offset().top + $('#skills_section').height()) && $(window).width() > 1200)) {
           $('.fa-bars').css('color', 'black');
+          $('.fa-bars').hover(function() {
+            $(this).css('color', 'yellow');
+          });
+          $('.fa-bars').mouseleave(function() {
+            $(this).css('color', 'black');
+          })
       };
 
 

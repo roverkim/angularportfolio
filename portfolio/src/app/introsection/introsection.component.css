@@ -20,6 +20,7 @@
 .typist {
   color: darkslategrey;
   font-size: 5rem;
+  margin: 10px;
 }
 
 .arrows {
@@ -91,9 +92,15 @@
 
 @media screen and (max-width: 1200px) {
   .typist {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .arrows {
     transform: scale(0.6);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .typist {
+    font-size: 2rem;
   }
 }

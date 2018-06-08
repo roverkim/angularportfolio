@@ -13,9 +13,9 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
     // Toggle Menu
     $('#menu').on('click', (e)=>{
+      e.stopPropagation();
       $('.fa-bars').toggleClass('menuActive');
       $('.nav').toggleClass('open');
-      e.stopPropagation();
     });
 
       // Scroll to Contact Section

@@ -83,10 +83,10 @@ export class ContactsectionComponent implements OnInit {
             $('#modal_icon_check').html('<i class="fa fa-check" aria-hidden="true"></i>');
             $('.card').toggleClass('card_click')
             $(".envelope").toggleClass("active");
-            setTimeout(()=> $('#statusModal').modal('hide'), 3000);
+            setTimeout(()=> $('#statusModal').modal('hide'), 1500);
           } else {
             this.emailMessage.modal = "Email Failed to Send. Please click on the submit button once more."
-            setTimeout(()=> $('#statusModal').modal('hide'), 3000);
+            setTimeout(()=> $('#statusModal').modal('hide'), 1500);
           }
         });
       } else {
