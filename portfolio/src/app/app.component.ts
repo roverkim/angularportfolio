@@ -20,12 +20,12 @@ export class AppComponent {
   title: string = 'app';
 
   ngOnInit(){
-      setTimeout(()=>{
-        $('#loader-wrapper').toggleClass('loaded');
-        $('#loader').toggleClass('loaded');
-      }, 2000);
+    setTimeout(()=>{
+      $('#loader-wrapper').toggleClass('loaded');
+      $('#loader').toggleClass('loaded');
+    }, 2000);
 
-      setTimeout(()=>this.showContent = true, 9500);
+    setTimeout(()=>this.showContent = true, 9500);
   }
 
 }

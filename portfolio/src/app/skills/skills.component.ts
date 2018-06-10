@@ -155,8 +155,6 @@ export class SkillsComponent implements OnInit {
             $(this).css('color', 'black');
           })
       };
-
-
     });
 
   }
