@@ -6,12 +6,13 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="fontawesome.css" type="text/css">
+  <link rel="stylesheet" href="fontawesome.css" type="text/css">  <!-- <link rel="stylesheet" type="text/css" href="../node_modules/carousel-3d/dist/styles/jquery.carousel-3d.default.css" /> -->
   <link rel="stylesheet" href="bootstrap.css" type="text/css">
   <script src="jquery.js" text/javascript></script>
   <script src="particles.js" text/javascript></script>
   <script src="bootstrap.js" charset="utf-8" text/javascript></script>
   <script>
+    
     if (navigator.serviceWorker) {
       navigator.serviceWorker.register('serviceworker.js').then(function(reg) {
         console.log('service worker registered.');
@@ -65,15 +66,6 @@
     } else {
       //console.log('particles not found');
       var intervalParticlesID = window.setInterval(checkParticles, 100);
-    }
-    
-    if (navigator.serviceWorker) {
-      navigator.serviceWorker.register('./assets/serviceworker.js').then(function(reg) {
-        console.log('service worker registered.')
-      }).catch((err) => {
-        console.log('problem registering service worker');
-        console.log(err);
-      });
     }
   </script>
 <script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="scripts.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>

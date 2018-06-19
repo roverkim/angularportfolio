@@ -55,7 +55,7 @@ ul, ol , li {
 }
 
 .caption span.border {
-  border: none;
+  border: none !important;
   color: #fff;
   padding: 18px;
   font-size: 2rem;
