@@ -74,6 +74,7 @@ ul , li {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 #left_skills {
@@ -349,12 +350,17 @@ ul , li {
     margin-bottom: 20px;
   }
   
+  .certification_top {
+    padding-bottom: 10px;
+  }
+  
   .certification_bottom {
     padding-bottom: 20px;
   }
   
   .skills_wrapper {
     padding-bottom: 40px;
+    margin-bottom: 0;
   }
 }
 
