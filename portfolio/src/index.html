@@ -55,15 +55,6 @@
       //console.log('particles not found');
       var intervalParticlesID = window.setInterval(checkParticles, 100);
     }
-    
-    if (navigator.serviceWorker) {
-      navigator.serviceWorker.register('./assets/serviceworker.js').then(function(reg) {
-        console.log('service worker registered.')
-      }).catch((err) => {
-        console.log('problem registering service worker');
-        console.log(err);
-      });
-    }
   </script>
 </body>
 </html>
