@@ -341,8 +341,26 @@ ul , li {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 640px) {
+
+  
+  .certification_top, .certification_bottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .certification_bottom {
+    padding-bottom: 20px;
+  }
+  
+  .skills_wrapper {
+    padding-bottom: 40px;
+  }
+}
+
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 1200px){
+        
     .modal-content {
         width: 100%;
     }
@@ -371,7 +389,7 @@ ul , li {
     }
 
     #left_skills {
-      margin-top: 50px;
+      margin-top: 25px;
     }
 
     #left_skills, #right_skills {
@@ -382,8 +400,6 @@ ul , li {
       transform: scale(0.9);
 
     }
-
-
 
     #left_skills ul {
       width: 100%;

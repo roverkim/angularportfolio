@@ -222,6 +222,12 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 640px) {
+  .bgimg-2 {
+    height: 1200px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
 
   .portfolio_wrapper {
@@ -232,9 +238,7 @@
 
   .portfolio_wrapper .featured_section {
     order: 0;
-    /* height: 100%; */
     width: 100%;
-    /* border-right: 1px black solid; */
     height: 60vh
   }
 
@@ -247,11 +251,10 @@
 
   .portfolio_wrapper .github_section {
     order: 1;
-    /* height: 100%; */
     width: 100%;
     overflow-y: scroll;
-    /* -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none; */
+    overflow: -moz-scrollbars-none;
   }
 }
