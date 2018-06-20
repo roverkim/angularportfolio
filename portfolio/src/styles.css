@@ -7,8 +7,11 @@ font-family: 'Fira Sans', sans-serif;
 
 /* You can add global styles to this file, and also import other style files */
 body {
-    -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body::-webkit-scrollbar {
