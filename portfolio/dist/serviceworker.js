@@ -41,7 +41,7 @@ self.addEventListener('install', event => {
     "https://fonts.googleapis.com/css?family=Cutive|Fira+Sans"
   ];
 
-  event.waitUntil(caches.open('porfolio-cache-v2').then(cache => {
+  event.waitUntil(caches.open(staticCacheName).then(cache => {
     toCache.forEach(link => cache.add(link));
   }))
 });
@@ -62,7 +62,7 @@ self.addEventListener('fetch', function(event) {
     event.respondWith(caches.match(event.request.url).then(function(response) {
 
       return response || fetch(event.request.url).then(res => {
-        return caches.open('porfolio-cache-v1').then(cache => {
+        return caches.open(staticCacheName).then(cache => {
           cache.put(new URL(event.request.url), res.clone());
 
           if (event.request.url == "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css") {
