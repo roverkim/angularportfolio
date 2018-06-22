@@ -91,7 +91,9 @@
   /* Safari 和 Chrome */
 }
 
-@media only screen and (max-device-width: 1366px) {
+
+/* Turn parallax effect off for small devices */
+@media screen and (max-device-width: 1366px) {
     .bgimg-1 {
         background-attachment: scroll;
     }

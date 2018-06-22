@@ -297,7 +297,14 @@ h1 {
   display: inline-block !important;
 }
 
-@media screen and (max-width: 1200px) {
+/* Turn parallax effect off for small devices */
+@media only screen and (max-device-width: 1366px) {
+    .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+@media screen and (max-width: 1024px) {
   .envelope-wrapper {
     transform: scale(1.5);
   }

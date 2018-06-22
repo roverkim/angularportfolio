@@ -370,7 +370,7 @@ ul , li {
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1024px){
         
     .modal-content {
         width: 100%;
@@ -429,4 +429,11 @@ ul , li {
       right: 15px;
     }
 
+}
+
+/* Turn parallax effect off for small devices */
+@media screen and (max-device-width: 1366px) {
+  #skills_section {
+        background-attachment: scroll;
+    }
 }

@@ -228,7 +228,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
 
   .portfolio_wrapper {
     width: 100vw;
@@ -246,9 +246,6 @@
     padding-top: 50px;
   }
 
-
-
-
   .portfolio_wrapper .github_section {
     order: 1;
     width: 100%;
@@ -257,4 +254,11 @@
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
   }
+}
+
+/* Turn parallax effect off for small devices */
+@media screen and (max-device-width: 1366px) {
+    .bgimg-2, {
+        background-attachment: scroll;
+    }
 }
