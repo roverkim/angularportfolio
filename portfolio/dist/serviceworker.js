@@ -1,3 +1,5 @@
+const staticCacheName = 'porfolio-cache-v3';
+
 self.addEventListener('install', event => {
   const toCache = [
     "/",
@@ -42,6 +44,17 @@ self.addEventListener('install', event => {
   event.waitUntil(caches.open('porfolio-cache-v2').then(cache => {
     toCache.forEach(link => cache.add(link));
   }))
+});
+
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(caches.keys().then(function(cacheNames) {
+    return Promise.all(cacheNames.filter(function(cacheName) {
+      return cacheName.startsWith('porfolio-cache-') && cacheName != staticCacheName;
+    }).map(function(cacheName) {
+      return caches.delete(cacheName);
+    }));
+  }));
 });
 
 self.addEventListener('fetch', function(event) {
