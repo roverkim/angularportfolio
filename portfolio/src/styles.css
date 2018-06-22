@@ -7,7 +7,6 @@ font-family: 'Fira Sans', sans-serif;
 
 /* You can add global styles to this file, and also import other style files */
 body {
-    height: 100%;
     overflow: scroll;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;

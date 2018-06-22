@@ -11,11 +11,12 @@
 
 .bgimg-1 {
   background-image: url("../../assets/intro2.jpg");
-  min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100%;
 }
+
 
 .typist {
   color: darkslategrey;
@@ -88,6 +89,12 @@
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
   /* Safari 和 Chrome */
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .bgimg-1 {
+        background-attachment: scroll;
+    }
 }
 
 @media screen and (max-width: 1200px) {
